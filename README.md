@@ -1,4 +1,4 @@
-# ENGLISH
+# ENGLISH VERSION
 
 # ASTRALISTA PRO - Psychoastrological Analysis and Diagnosis System
 
@@ -76,15 +76,20 @@ echo "Ascendant: " . round($ascendant, 2) . " degrees\n";
 // Access zodiac signs information
 echo "Sign number 1 (Aries): " . AstroEngine::$zodiacSigns[0]['name'] . " (" . AstroEngine::$zodiacSigns[0]['symbol'] . ")\n";
 ?>
+```
 
-Contributing
+## Contributing
+
 Contributions are welcome. If you wish to improve the project, open issues, or submit pull requests, please follow the contributing guidelines (to be defined).
-License
-This project is distributed under the MIT License. See the LICENSE file (if applicable) for more details.
 
-========================================
- SPANISH VERSION / VERSIÓN EN CASTELLANO
-========================================
+## License
+
+This project is distributed under the MIT License. See the `LICENSE` file (if applicable) for more details.
+
+---
+
+# VERSIÓN EN CASTELLANO
+
 # ASTRALISTA PRO - Sistema de Análisis y Diagnóstico Psicoastrológico
 
 ASTRALISTA PRO es un motor monolítico integral diseñado para el análisis y diagnóstico psicoastrológico. Su núcleo se centra en el cálculo preciso del estado celeste, el estado terrestre y los aspectos astrológicos, proporcionando una base sólida para interpretaciones avanzadas.
@@ -118,13 +123,17 @@ El corazón del sistema reside en la clase `AstroEngine`, que encapsula las lóg
 Para poner en marcha ASTRALISTA PRO, simplemente clone el repositorio y asegúrese de tener un entorno PHP configurado.
 
 1.  **Clonar el Repositorio**:
+    ```bash
     git clone https://github.com/tu-usuario/astralista-pro.git
     cd astralista-pro
+    ```
 
 2.  **Configuración del Entorno**:
     Asegúrese de tener PHP (versión 7.4 o superior recomendada) instalado en su sistema.
     Puede usar un servidor web local como Apache o Nginx, o el servidor web integrado de PHP para pruebas:
+    ```bash
     php -S localhost:8000
+    ```
 
 ## Uso
 
@@ -132,30 +141,32 @@ Una vez configurado, puede interactuar con el motor ASTRALISTA PRO llamando a lo
 
 Ejemplo de cálculo del Día Juliano y el Ascendente:
 
-    <?php
-    require_once 'index.php'; // Asumiendo que AstroEngine está definido aquí
+```php
+<?php
+require_once 'index.php'; // Asumiendo que AstroEngine está definido aquí
 
-    // Datos de ejemplo
-    $year = 1990;
-    $month = 7;
-    $day = 20;
-    $hour = 14;
-    $min = 30;
-    $tz = -3.0; // Zona horaria GMT-3
-    $lat = -34.6037; // Latitud de Buenos Aires
-    $lon = -58.3816; // Longitud de Buenos Aires
+// Datos de ejemplo
+$year = 1990;
+$month = 7;
+$day = 20;
+$hour = 14;
+$min = 30;
+$tz = -3.0; // Zona horaria GMT-3
+$lat = -34.6037; // Latitud de Buenos Aires
+$lon = -58.3816; // Longitud de Buenos Aires
 
-    // Calcular Día Juliano
-    $jd = AstroEngine::getJulianDay($year, $month, $day, $hour, $min, $tz);
-    echo "Día Juliano: " . $jd . "\n";
+// Calcular Día Juliano
+$jd = AstroEngine::getJulianDay($year, $month, $day, $hour, $min, $tz);
+echo "Día Juliano: " . $jd . "\n";
 
-    // Calcular Ascendente
-    $ascendant = AstroEngine::calculateAscendant($jd, $lat, $lon);
-    echo "Ascendente: " . round($ascendant, 2) . " grados\n";
+// Calcular Ascendente
+$ascendant = AstroEngine::calculateAscendant($jd, $lat, $lon);
+echo "Ascendente: " . round($ascendant, 2) . " grados\n";
 
-    // Acceder a la información de los signos zodiacales
-    echo "Signo número 1 (Aries): " . AstroEngine::$zodiacSigns[0]['name'] . " (" . AstroEngine::$zodiacSigns[0]['symbol'] . ")\n";
-    ?>
+// Acceder a la información de los signos zodiacales
+echo "Signo número 1 (Aries): " . AstroEngine::$zodiacSigns[0]['name'] . " (" . AstroEngine::$zodiacSigns[0]['symbol'] . ")\n";
+?>
+```
 
 ## Contribuciones
 
