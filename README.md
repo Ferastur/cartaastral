@@ -75,6 +75,7 @@ echo "Ascendant: " . round($ascendant, 2) . " degrees\n";
 
 // Access zodiac signs information
 echo "Sign number 1 (Aries): " . AstroEngine::$zodiacSigns[0]['name'] . " (" . AstroEngine::$zodiacSigns[0]['symbol'] . ")\n";
+?>
 
 Contributing
 Contributions are welcome. If you wish to improve the project, open issues, or submit pull requests, please follow the contributing guidelines (to be defined).
