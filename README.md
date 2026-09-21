@@ -35,7 +35,7 @@ To get ASTRALISTA PRO up and running, simply clone the repository and make sure 
 1.  **Clone the Repository**:
     ```bash
     git clone https://github.com/Ferastur/cartaastral.git
-    cd astralista-pro
+    cd cartaastral
     ```
 
 2.  **Environment Setup**:
@@ -125,7 +125,7 @@ Para poner en marcha ASTRALISTA PRO, simplemente clone el repositorio y asegúre
 1.  **Clonar el Repositorio**:
     ```bash
     git clone https://github.com/Ferastur/cartaastral.git
-    cd astralista-pro
+    cd cartaastral
     ```
 
 2.  **Configuración del Entorno**:
