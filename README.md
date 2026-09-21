@@ -1,3 +1,89 @@
+# ENGLISH
+
+# ASTRALISTA PRO - Psychoastrological Analysis and Diagnosis System
+
+ASTRALISTA PRO is a comprehensive monolithic engine designed for psychoastrological analysis and diagnosis. Its core focuses on the precise calculation of the celestial state, terrestrial state, and astrological aspects, providing a solid foundation for advanced interpretations.
+
+## Key Features
+
+This project is conceived as a foundational tool for computational astrology, offering the following initial capabilities:
+
+*   **Ephemeris Engine**: A robust system to calculate the Julian Day, an essential temporal baseline for all astrological operations.
+*   **Ascendant Calculation**: Accurately determines the rising sign, a fundamental pillar in the natal chart.
+*   **Planetary Positions**: Prepared to calculate planetary positions, although this feature is currently under development.
+*   **Zodiac Signs Database**: Includes a complete reference of the 12 signs of the zodiac, along with their key properties (element, modality, ruler, color) to facilitate interpretation and visualization.
+*   **Monolithic Architecture**: Integrates the different sections (celestial state, terrestrial state, aspects) into a single structure for simplified management.
+
+## Project Structure
+
+The core of the system resides in the `AstroEngine` class, which encapsulates the astronomical calculation logic:
+
+*   `AstroEngine::$zodiacSigns`: A static array containing detailed information for each zodiac sign.
+*   `AstroEngine::getJulianDay()`: Method to convert a specific date and time, along with the time zone, into its Julian Day equivalent.
+*   `AstroEngine::calculateAscendant()`: Method responsible for determining the exact degree of the Ascendant for a given latitude, longitude, and Julian Day.
+*   `AstroEngine::getPlanetaryPositions()`: Function under development to calculate the celestial positions of the planets.
+
+## Technologies Used
+
+*   **PHP**: Primary programming language used for the development of the astrological engine.
+*   **Astronomical Algorithms**: Implementation of mathematical formulas for ephemerides and celestial position calculations.
+
+## Getting Started
+
+To get ASTRALISTA PRO up and running, simply clone the repository and make sure you have a configured PHP environment.
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/tu-usuario/astralista-pro.git
+    cd astralista-pro
+    ```
+
+2.  **Environment Setup**:
+    Ensure you have PHP (version 7.4 or higher recommended) installed on your system.
+    You can use a local web server like Apache or Nginx, or PHP's built-in web server for testing:
+    ```bash
+    php -S localhost:8000
+    ```
+
+## Usage
+
+Once configured, you can interact with the ASTRALISTA PRO engine by calling the methods of the `AstroEngine` class from your PHP scripts.
+
+Example of Julian Day and Ascendant calculation:
+
+```php
+<?php
+require_once 'index.php'; // Assuming AstroEngine is defined here
+
+// Sample data
+$year = 1990;
+$month = 7;
+$day = 20;
+$hour = 14;
+$min = 30;
+$tz = -3.0; // Timezone GMT-3
+$lat = -34.6037; // Buenos Aires Latitude
+$lon = -58.3816; // Buenos Aires Longitude
+
+// Calculate Julian Day
+$jd = AstroEngine::getJulianDay($year, $month, $day, $hour, $min, $tz);
+echo "Julian Day: " . $jd . "\n";
+
+// Calculate Ascendant
+$ascendant = AstroEngine::calculateAscendant($jd, $lat, $lon);
+echo "Ascendant: " . round($ascendant, 2) . " degrees\n";
+
+// Access zodiac signs information
+echo "Sign number 1 (Aries): " . AstroEngine::$zodiacSigns[0]['name'] . " (" . AstroEngine::$zodiacSigns[0]['symbol'] . ")\n";
+
+Contributing
+Contributions are welcome. If you wish to improve the project, open issues, or submit pull requests, please follow the contributing guidelines (to be defined).
+License
+This project is distributed under the MIT License. See the LICENSE file (if applicable) for more details.
+
+========================================
+ SPANISH VERSION / VERSIÓN EN CASTELLANO
+========================================
 # ASTRALISTA PRO - Sistema de Análisis y Diagnóstico Psicoastrológico
 
 ASTRALISTA PRO es un motor monolítico integral diseñado para el análisis y diagnóstico psicoastrológico. Su núcleo se centra en el cálculo preciso del estado celeste, el estado terrestre y los aspectos astrológicos, proporcionando una base sólida para interpretaciones avanzadas.
